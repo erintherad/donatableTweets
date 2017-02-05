@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
 
     session[:user_id] = user.id
 
-    redirect_to profile_path
+    redirect_to dashboard_path
   end
 
   def failure
