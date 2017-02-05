@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170204201818) do
+ActiveRecord::Schema.define(version: 20170205180158) do
+
+  create_table "pledges", force: :cascade do |t|
+    t.integer  "dollars_per_tweet"
+    t.integer  "max_per_month"
+    t.integer  "month_to_date"
+    t.integer  "lifetime_total"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.integer  "user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "full_name"

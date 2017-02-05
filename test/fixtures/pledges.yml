@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dollars_per_tweet: 1
+  max_per_month: 1
+  month_to_date: 1
+
+two:
+  dollars_per_tweet: 1
+  max_per_month: 1
+  month_to_date: 1
