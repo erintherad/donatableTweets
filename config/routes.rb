@@ -6,6 +6,12 @@ Rails.application.routes.draw do
 
   get '/dashboard', :to => 'dashboard#show', :as => :dashboard
 
+  post '/pledges',        :to => 'pledges#create',  :as => :pledges
+  get '/pledges',         :to => 'pledges#index'
+  get '/pledges/:id',     :to => 'pledges#show',    :as => :pledge
+  put '/pledges/:id',     :to => 'pledges#update'
+  delete '/pledges/:id',  :to => 'pledges#destroy'
+
   get "/profile", to: "users#profile", :as => :profile
 
   root to: 'root#index'
