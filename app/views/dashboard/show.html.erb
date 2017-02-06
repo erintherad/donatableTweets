@@ -3,13 +3,24 @@ Hello <%= @user.full_name %>,
 Your twitter handle is: <%= @user.twitter_handle %>
 
 Your location is: <%= @user.location %>
+<br>
+<br>
+<div id="pledge"></div>
 
-<form action="">
-  How much per tweet?
-  <input type="text">
-  <br>
-  Set your monthly donation goal
-  <input type="text">
-  <br>
-  <input type="submit" value="Submit">
-</form>
+<script type="text/template" id="pledge-form-template">
+  <form id="pledge">
+    <fieldset>
+        <legend>Fill out your pledge:</legend>
+          How much per tweet?<br>
+          <input id="tweet" type="text" value="{{ dollars_per_tweet }}"><br>
+          Set your monthly donation goal<br>
+          <input id="goal" type="text" value="{{ max_per_month }}"><br>
+          <input type="submit" value="Submit"><br><br>
+    </fieldset>
+  </form>
+</script>
+
+<script type="text/template" id="pledge-template">
+  <p>You have pledged: {{ dollars_per_tweet }}</p>
+  <p>Your monthly maximum is: {{ max_per_month }}</p>
+</script>

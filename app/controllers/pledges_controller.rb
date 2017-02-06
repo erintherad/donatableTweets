@@ -10,7 +10,7 @@ class PledgesController < ApplicationController
   end
 
   def index
-    pledges = Pledge.all
+    pledges = Pledge.where(user_id: current_user.id)
 
     render json: pledges
   end
