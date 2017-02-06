@@ -10,5 +10,12 @@
 
   <body>
     <%= yield %>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script>
+      // use mustache-style temlpating
+      _.templateSettings = {
+        interpolate: /\{\{(.+?)\}\}/g
+      };
+    </script>
   </body>
 </html>
