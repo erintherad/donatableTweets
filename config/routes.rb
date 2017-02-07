@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   put '/pledges/:id',     :to => 'pledges#update'
   delete '/pledges/:id',  :to => 'pledges#destroy'
 
+  get '/tweets', :to => 'tweets#index'
+
   get "/profile", to: "users#profile", :as => :profile
 
   root to: 'root#index'

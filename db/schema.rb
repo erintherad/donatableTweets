@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170205180158) do
+ActiveRecord::Schema.define(version: 20170207034512) do
 
   create_table "pledges", force: :cascade do |t|
     t.integer  "dollars_per_tweet"
@@ -20,6 +20,15 @@ ActiveRecord::Schema.define(version: 20170205180158) do
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
     t.integer  "user_id"
+  end
+
+  create_table "tweets", force: :cascade do |t|
+    t.string   "author"
+    t.string   "message"
+    t.datetime "tweeted_at"
+    t.bigint   "tweet_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
