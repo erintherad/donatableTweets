@@ -6,7 +6,11 @@ Your location is: <%= @user.location %>
 <br>
 <br>
 <div id="pledge"></div>
+<br>
+<br>
+<div id="tweeter"></div>
 
+<!-- Pledge form template -->
 <script type="text/template" id="pledge-form-template">
   <form id="pledge">
     <fieldset>
@@ -19,8 +23,17 @@ Your location is: <%= @user.location %>
     </fieldset>
   </form>
 </script>
+<!-- End of Pledge form template -->
 
+<!-- Pledge template -->
 <script type="text/template" id="pledge-template">
   <p>You have pledged: {{ dollars_per_tweet }}</p>
   <p>Your monthly maximum is: {{ max_per_month }}</p>
 </script>
+<!-- End of Pledge template -->
+
+<!-- Trump Template -->
+<script type="text/template" id="tweeter-template">
+  <h3>Trump's latest tweet was at: {{ created_at }}</h3>
+</script>
+<!-- End of Trump Template -->
