@@ -18,7 +18,7 @@ class PledgeTest < ActiveSupport::TestCase
   end
 
   test "pledge belongs_to user" do
-    user = User.create
+    user = User.create(twitter_handle: "erintherad", full_name: "Erin Mahoney")
     pledge = Pledge.create(dollars_per_tweet: 1, user_id: user.id)
 
     assert_equal user, pledge.user
