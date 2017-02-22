@@ -45,4 +45,17 @@ $(document).ready(function() {
        }
      });
   });
+
+  $.ajax({
+    type: "GET",
+    url: "/tweets",
+    success: function(data) {
+      var tweeterTemplate = $('#tweeter-template').text();
+      var templateFunction = _.template(tweeterTemplate);
+
+      var tweet = data[0];
+      var html = templateFunction(tweet);
+      $('#tweeter').html(html);
+    }
+  });
 });

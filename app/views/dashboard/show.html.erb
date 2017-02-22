@@ -34,6 +34,6 @@ Your location is: <%= @user.location %>
 
 <!-- Trump Template -->
 <script type="text/template" id="tweeter-template">
-  <h3>Trump's latest tweet was at: {{ created_at }}</h3>
+  <h3>Trump's latest tweet was at: {{ _template.formatDate(created_at) }}</h3>
 </script>
 <!-- End of Trump Template -->
