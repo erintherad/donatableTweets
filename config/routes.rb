@@ -18,3 +18,18 @@ Rails.application.routes.draw do
 
   root to: 'root#index'
 end
+
+#       Prefix Verb   URI Pattern                        Controller#Action
+#        login GET    /login(.:format)                   sessions#new
+#       logout GET    /logout(.:format)                  sessions#logout
+#              GET    /auth/:provider/callback(.:format) sessions#create
+# auth_failure GET    /auth/failure(.:format)            sessions#failure
+#    dashboard GET    /dashboard(.:format)               dashboard#show
+#      pledges POST   /pledges(.:format)                 pledges#create
+#              GET    /pledges(.:format)                 pledges#index
+#       pledge GET    /pledges/:id(.:format)             pledges#show
+#              PUT    /pledges/:id(.:format)             pledges#update
+#              DELETE /pledges/:id(.:format)             pledges#destroy
+#       tweets GET    /tweets(.:format)                  tweets#index
+#      profile GET    /profile(.:format)                 users#profile
+#         root GET    /                                  root#index
