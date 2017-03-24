@@ -1,0 +1,14 @@
+$lightyellow : #fceb88;
+
+body {
+  background-color: $lightyellow;
+}
+
+.img-container {
+  position: relative;
+}
+.dt-head {
+  position: fixed;
+  bottom: 0;
+  opacity: 0.85;
+}
