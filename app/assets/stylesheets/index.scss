@@ -1,9 +1,40 @@
+/* Fonts */
+$headline: 'langdon', sans-serif;
+
+@font-face {
+  font-family: 'langdon';
+  src: url('/fonts/Langdon.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Colors */
 $lightyellow : #fceb88;
+
+@media all and (max-width: 1600px) { /* screen size until 1200px */
+  h1 {
+    font-size: 8em; /* 1.5x default size */
+  }
+}
+@media all and (max-width: 1000px) { /* screen size until 1000px */
+  h1 {
+    font-size: 6em; /* 1.2x default size */
+  }
+}
+@media all and (max-width: 500px) { /* screen size until 500px */
+  h1 {
+    font-size: 4em; /* 0.8x default size */
+  }
+}
 
 body {
   background-color: $lightyellow;
 }
 
+.headline {
+  font-family: $headline;
+  border-bottom: none;
+}
 .img-container {
   position: relative;
 }
